@@ -8,6 +8,7 @@
 /* base 下記黒字3行、必ず記載する */
 
 html {
+    font-size: 62.5%;
     -webkit-appearance: none;
     -webkit-text-size-adjust: 100%;
     word-break: break-all;
@@ -21,7 +22,7 @@ body {
 font-family: "Noto Sans JP", sans-serif;
 font-weight: 500;
 color: #505050;
-font-size: 1.0625rem;
+font-size: 1.7rem;
 line-height: calc(30 / 17);
 letter-spacing: 0;
 margin: 0;
@@ -63,24 +64,31 @@ img {
 }
 .section-title h2 {
     display: inline-block;
-    font-size: 1.875rem;
-    line-height:calc(43 / 30);
-    color: var(--color-main);
+    font-size: 2.5rem;
+    line-height:calc(36 / 25);
+    color: var(--color-sub);
     font-family: var(--font-ns);
     position: relative;
 }
+.section-title h2::before,
 .section-title h2::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -12px;
-    transform: translateX(-50%);
-    width: 50px;
-    height: 2px;
-    background: var(--color-main);
+    content: "" ;
+    width: 25px ;
+    height: 25px ;
+    background-image: url(/img/logo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute ;
+    top: 50%;
+    transform: translateY(-50%) ;
+    
 }
-
-
+.section-title h2::before {
+    left: -45px;
+}
+.section-title h2::after {
+    right: -45px
+}
 
 .header {
     width: 100%;
@@ -110,7 +118,7 @@ img {
     display: flex;
     gap: 9px;
     align-items: center;
-    line-height: calc(33 / 20);
+    line-height: calc(33 / 18);
     font-family: var(--font-ns);
     color: var(--color-sub);
     transition: opacity 0.4s;
@@ -126,11 +134,11 @@ img {
     height: auto;
 }
 .header__title {
-    font-size: 1.125rem;
+    font-size: 1.8rem;
 }
 @media (max-width: 767px) {
     .header__title {
-    font-size: 1.25rem;
+    font-size: 2rem;
 }
 }
 
@@ -142,7 +150,7 @@ img {
 
 .header__nav ul li a {
     align-items: center;
-    font-size: 0.875rem;
+    font-size: 1.4rem;
     font-weight: 700;
     height: 50px;
     line-height: calc(14 / 14);
