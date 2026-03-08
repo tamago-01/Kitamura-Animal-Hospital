@@ -75,7 +75,7 @@ img {
     content: "" ;
     width: 25px ;
     height: 25px ;
-    background-image: url(/img/logo.svg);
+    background-image: url(../img/logo.svg);
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute ;
@@ -149,7 +149,6 @@ img {
 }
 
 .header__nav ul li a {
-    align-items: center;
     font-size: 1.4rem;
     font-weight: 700;
     height: 50px;
@@ -162,4 +161,112 @@ img {
     .header__nav ul li a:hover {
         opacity: 0.7;
     }
+}
+.mv {
+    position: relative;
+}
+.mv .inner {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 880px;
+    height: 100%;
+}
+
+.mv__contents {
+    position: absolute;
+    top: 152px;
+    left: 0;             
+    padding: 23px 35px 23px 0 ; 
+    
+}
+
+.mv__contents::before {
+    content:"" ;
+    position: absolute;
+    top: 0;
+    left: -9999px; /* 画面左端の外 */    
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.702);
+    z-index: -1;
+}
+
+
+@media (max-width: 1000px) {
+    .mv__contents {
+        top: 80px;
+        padding-left: 20px;
+    }
+    .mv__catch-sub {
+        font-size: 2rem;
+    }
+    .mv__catch-main {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .mv__contents {
+        top: auto;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.mv__image img {
+    aspect-ratio: 1080 / 500;
+    object-fit: cover;
+}
+@media(max-width: 767px) {
+    .mv__image img {
+    aspect-ratio: 375 / 550;
+}
+}
+
+.mv__catch {
+    text-align: left;
+}
+
+
+
+@media(max-width: 767px) {
+    .mv__catch {
+    height: auto;
+}
+}
+
+.mv__catch-sub {
+    font-size: 2.5rem;
+    line-height: calc(36 / 25) ;
+    display: block;
+}
+@media(max-width: 1000px) {
+    .mv__catch-sub {
+    font-size: 1.8rem;
+    line-height: calc(29 / 20);
+}
+}
+@media(max-width: 767px) {
+    .mv__catch-sub {
+    font-size: 2rem;
+    line-height: calc(29 / 20);
+}
+}
+
+.mv__catch-main {
+    font-size: 4rem;
+    line-height: calc(60 / 40);
+    color: var(--color-main);
+    display: block;
+    margin-top: 8px;
+}
+@media(max-width: 1000px) {
+    .mv__catch-main {
+    font-size: 3rem;
+    line-height: calc(40 / 30);
+    margin-top: 7px;
+}
 }
