@@ -167,7 +167,8 @@ img {
 }
 .mv .inner {
     position: absolute;
-    top: 0;
+    inset: 0;
+    height: 100%;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
@@ -178,7 +179,7 @@ img {
 .mv__contents {
     position: absolute;
     top: 152px;
-    left: 0;             
+    left: 0px;         
     padding: 23px 35px 23px 0 ; 
     
 }
@@ -187,7 +188,8 @@ img {
     content:"" ;
     position: absolute;
     top: 0;
-    left: -9999px; /* 画面左端の外 */    
+    margin: 0 auto;
+    left: -9999px; 
     right: 0;
     bottom: 0;
     background: rgba(255, 255, 255, 0.702);
@@ -230,8 +232,6 @@ img {
     text-align: left;
 }
 
-
-
 @media(max-width: 767px) {
     .mv__catch {
     height: auto;
@@ -268,5 +268,85 @@ img {
     font-size: 3rem;
     line-height: calc(40 / 30);
     margin-top: 7px;
+}
+}
+
+
+.about__contents {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    margin-inline: 20px;
+    position: relative;
+
+}
+
+@media(max-width: 767px) {
+    .about__contents {
+    margin-top: 49px;
+    margin-bottom: 40px;
+    margin-inline: 20px;
+}
+}
+
+.about__title {
+    font-size: 3rem;
+    font-family: var(--font-ns);
+    color: var(--color-main);
+    text-align: center;
+
+}
+@media(max-width: 767px) {
+    .about__title {
+    font-size: 2.5rem;
+    line-height: calc(35 / 25);
+    }
+}
+
+
+.about__text {
+    font-size: 1.8rem;
+    line-height: calc(33 / 18);
+    font-weight: 500;
+    margin-top: 15px;
+    text-align: center;
+    /* position: relative; */
+}
+
+@media(max-width: 767px) {
+    .about__text {
+        text-align: left;
+        font-size: 1.6rem;
+        line-height: calc(30 / 16);
+    }
+}
+
+.about__contents::after {
+    content: "";
+    position: absolute;
+    top: 114px;
+    right: -36px;
+    width: 83px;
+    height: 77px;
+    background-image: url(../img/ashiato_2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 1000px) {
+    .about__contents::after {
+    top: 145px;
+    right: 20px;
+    width: 68px;
+    height: 62px;
+    }
+}
+
+@media(max-width: 767px) {
+    .about__contents::after {
+    top: 223px;
+    right: 15px;
+    width: 68px;
+    height: 62px;
+
 }
 }
