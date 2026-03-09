@@ -242,6 +242,7 @@ img {
     font-size: 2.5rem;
     line-height: calc(36 / 25) ;
     display: block;
+    font-weight: 700;
 }
 @media(max-width: 1000px) {
     .mv__catch-sub {
@@ -258,6 +259,7 @@ img {
 
 .mv__catch-main {
     font-size: 4rem;
+    font-weight: 700;
     line-height: calc(60 / 40);
     color: var(--color-main);
     display: block;
@@ -293,6 +295,7 @@ img {
     font-family: var(--font-ns);
     color: var(--color-main);
     text-align: center;
+    font-weight: 700;
 
 }
 @media(max-width: 767px) {
@@ -343,10 +346,95 @@ img {
 
 @media(max-width: 767px) {
     .about__contents::after {
-    top: 223px;
+    top: 228px;
     right: 15px;
     width: 68px;
     height: 62px;
 
+}
+}
+.strength {
+    background-color: rgb(13 150 160 / 10.2%);
+    padding: 64px 100px 68px;
+}
+@media (max-width: 767px) {
+    .strength {
+        padding: 51px 20px 35px;
+    }
+}
+
+.strength-item{
+    margin-top: 48px;
+    display: flex;
+    column-gap: calc(45 / 880 * 100%);
+    align-items: center
+}
+.strength-item:not(:first-child) {
+    margin-top: 50px;
+}
+
+@media(max-width: 767px) {
+    .strength-item {
+    margin-top: 42px;
+    flex-direction: column-reverse;
+    row-gap: 26px;
+}
+.strength-item:not(:first-child) {
+        margin-top: 42px;
+    }
+
+.strength-item:nth-child(2) {
+        flex-direction: column; /* ← 2番目だけ通常の順番に戻す */
+    }
+}
+
+
+
+.strength__image {
+    width: calc(440 / 880 * 100%);
+}
+@media(max-width: 767px) {
+    .strength__image {
+        width: 100%;
+    }
+}
+.strength__image img {
+    aspect-ratio: 440 / 247;
+    object-fit: cover;
+}
+@media(max-width: 767px) {
+.strength__image img {
+    aspect-ratio: 335 / 200;
+    object-fit: cover;
+}
+}
+
+.strength__textarea {
+    flex: 1;
+}
+
+.strength__textarea h3 {
+    font-size: 2.2rem;
+    line-height: calc(33 / 22);
+    font-weight: 700;  
+}
+@media(max-width: 767px) {
+    .strength__textarea h3  {
+    text-align: center;
+    font-size: 2rem;
+    line-height: calc(30 / 20);
+}
+}
+
+.strength__textarea p {
+    margin-top: 19px;
+    font-size: 1.8rem;
+    line-height: calc(33 / 18);
+}
+@media(max-width: 767px) {
+    .strength__textarea p  {
+    font-size: 1.6rem;
+    line-height: calc(30 / 16);
+    margin-top: 8px;
 }
 }
