@@ -167,9 +167,8 @@ img {
 }
 .mv .inner {
     position: absolute;
-    inset: 0;
-    height: 100%;
     left: 50%;
+    top: 0;
     transform: translateX(-50%);
     width: 100%;
     max-width: 880px;
@@ -355,7 +354,7 @@ img {
 }
 .strength {
     background-color: rgb(13 150 160 / 10.2%);
-    padding: 64px 100px 68px;
+    padding: 64px 30px 68px;
 }
 @media (max-width: 767px) {
     .strength {
