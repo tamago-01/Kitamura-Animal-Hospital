@@ -70,6 +70,7 @@ img {
     color: var(--color-sub);
     font-family: var(--font-ns);
     position: relative;
+    font-weight: 700;
 }
 .section-title h2::before,
 .section-title h2::after {
@@ -141,6 +142,7 @@ img {
 }
 .header__title {
     font-size: 1.8rem;
+    font-weight: 700;
 }
 @media (max-width: 767px) {
     .header__title {
@@ -709,6 +711,7 @@ article:first-of-type .news-item {
 
 .access__tel-number {
     font-size: 2.5rem;
+    font-weight: 700;
     line-height: calc(40 / 25);
     color: var(--color-main);
    
@@ -905,6 +908,7 @@ article:first-of-type .news-item {
 .form-submit {
     width: 200px;
     height: 50px;
+    font-weight: 700;
     align-items: center;
     background-color: var(--color-main);
     color: #fff;
@@ -916,6 +920,7 @@ article:first-of-type .news-item {
     cursor: pointer;
     border: 2px solid var(--color-main);
     transition: all .4s;
+    letter-spacing: 0.2em;
 }
 .form-submit:hover {
     background-color: #fff;
@@ -983,6 +988,7 @@ article:first-of-type .news-item {
 .footer-nav__link {
     color: #fff;
     font-size: 20px;
+    font-weight: 700;
 }
 @media screen and (max-width: 767px) {
     .footer-nav__link {
@@ -1007,6 +1013,7 @@ article:first-of-type .news-item {
     text-align: center;
     line-height: calc(33 / 20);
     font-size: 2rem;
+    font-weight: 700;
 }
 @media screen and (max-width: 767px) {
     .footer__copyright{
@@ -1055,10 +1062,4 @@ article:first-of-type .news-item {
     }
 }
 
-
-@media(any-hover: hover) {
-    .sns__list li a:hover {
-        opacity: 0.7;
-    }
-}
 
