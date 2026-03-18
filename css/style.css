@@ -143,10 +143,12 @@ img {
 .header__title {
     font-size: 1.8rem;
     font-weight: 700;
+    line-height: calc(33 / 18);
 }
 @media (max-width: 767px) {
     .header__title {
     font-size: 2rem;
+    line-height: calc(33 / 20);
 }
 }
 
@@ -154,11 +156,14 @@ img {
     display: flex;
     align-items: center;
     column-gap: 10px;
+    
 }
 
 .header__nav ul li a {
     font-size: 1.4rem;
     font-weight: 700;
+    display: flex;
+    align-items: center;
     height: 50px;
     line-height: calc(14 / 14);
     font-family: var(--font-ns);
@@ -190,13 +195,30 @@ img {
     padding: 23px 37px 23px 0 ; 
     
 }
-@media (max-width: 767px) {
+@media (max-width: 1000px) {
     .mv__contents {
-        padding: 18px 25px 23px 0 ; 
+        top: 80px;
+        padding-left: 20px;
+    }
+    .mv__catch-sub {
+        font-size: 2rem;
+        line-height: calc(36 / 25);
+    }
+    .mv__catch-main {
+        font-size: 3rem;
+        line-height: calc(60 / 40);
     }
 }
 
 
+@media (max-width: 767px) {
+    .mv__contents {
+        padding: 18px 25px 23px 20px ;
+        top: auto;
+        bottom: -9px;
+        left: 0;
+    }
+}
 
 
 .mv__contents::before {
@@ -212,26 +234,6 @@ img {
 }
 
 
-@media (max-width: 1000px) {
-    .mv__contents {
-        top: 80px;
-        padding-left: 20px;
-    }
-    .mv__catch-sub {
-        font-size: 2rem;
-    }
-    .mv__catch-main {
-        font-size: 3rem;
-    }
-}
-
-@media (max-width: 767px) {
-    .mv__contents {
-        top: auto;
-        bottom: -9px;
-        left: 0;
-    }
-}
 
 .mv__image img {
     aspect-ratio: 1080 / 500;
@@ -311,6 +313,7 @@ img {
     color: var(--color-main);
     text-align: center;
     font-weight: 700;
+    line-height: calc(50 / 30);
 
 }
 @media(max-width: 767px) {
@@ -345,7 +348,7 @@ img {
     right: -43px;
     width: 83px;
     height: 77px;
-    background-image: url(../img/ashiato_2.png);
+    background-image: url(../img/ashiato_2.svg);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -369,7 +372,7 @@ img {
 }
 }
 .strength {
-    background-color: rgb(13 150 160 / 10.2%);
+    background-color: rgb(13 150 160 / 0.10);
     padding: 64px 30px 68px;
 }
 @media (max-width: 767px) {
@@ -531,7 +534,7 @@ img {
 }
 .news {
     padding: 64px 30px 68px;
-    background-color: rgb(13 150 160 / 10.2%);
+    background-color: rgb(13 150 160 / 0.10);
 }
 @media (max-width: 767px) {
     .news {
@@ -547,13 +550,16 @@ img {
         margin-top: 46px;
     }
 }
+article {
+   border-bottom: 0.1rem solid var(--color-gray); 
+}
+
 
 .news-item {
     display: flex;
     padding: 14.5px  21px;
     align-items: center;
     column-gap: calc(25px / 880px * 100%);
-    border-bottom: 0.1rem solid var(--color-gray);
     transition: opacity 0.4s;
 }
 @media (max-width: 767px) {
@@ -564,9 +570,10 @@ img {
         align-items: initial;
     }
 }
-article:first-of-type .news-item {
+article:first-of-type  {
     border-top: 0.1rem solid var(--color-gray);
 }
+
 
 @media (any-hover: hover) {
     .news-item:hover {
@@ -729,6 +736,7 @@ article:first-of-type .news-item {
     line-height: calc(27 / 18);
     font-size: 1.8rem;
     margin-top: 8px;
+    
 }
 @media (max-width: 767px) {
     .access__mail {
@@ -736,6 +744,9 @@ article:first-of-type .news-item {
     font-size: 1.6rem;
     margin-top: 7px;
 }
+}
+.access__address a {
+    transition: opacity 0.4s;
 }
 
 @media (any-hover: hover) {
@@ -777,7 +788,7 @@ article:first-of-type .news-item {
 }
 .contact {
     padding: 62px 30px 80px;
-     background-color: rgb(13 150 160 / 10.2%);
+     background-color: rgb(13 150 160 / 0.1);
 }
 @media (max-width: 767px) {
     .contact {
@@ -898,8 +909,6 @@ article:first-of-type .news-item {
     }
 }
 
-
-
 .contact__btn {
     text-align: center;
    
@@ -987,12 +996,14 @@ article:first-of-type .news-item {
 
 .footer-nav__link {
     color: #fff;
-    font-size: 20px;
+    font-size: 2rem;
+    line-height: calc(33 / 20);
     font-weight: 700;
 }
 @media screen and (max-width: 767px) {
     .footer-nav__link {
-        font-size: 18px;
+        font-size: 1.8rem;
+        line-height: calc(33 / 18);
     }   
 }
 .footer__nav ul li a {
@@ -1017,14 +1028,14 @@ article:first-of-type .news-item {
 }
 @media screen and (max-width: 767px) {
     .footer__copyright{
-        font-size: 16px;
+        font-size: 1.6rem;
         margin-top: 24px;
         text-align: center;
     }   
 }
 @media screen and (max-width: 375px) {
     .footer__copyright {
-        line-height: 1;
+        line-height:  calc(33 / 16);
         margin-top: 22px;
         
     }   
@@ -1047,7 +1058,6 @@ article:first-of-type .news-item {
 
 .sns__list {
     list-style: none;
-    line-height: 0;
 }
 
 .sns__link {
