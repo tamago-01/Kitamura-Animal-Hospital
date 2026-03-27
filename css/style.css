@@ -1,7 +1,7 @@
 :root {
     --color-main: #0D96A0;
     --color-sub: #505050;
-    --font-ns: "Noto Sans JP", san-serif;
+    --font-ns: "Noto Sans JP", sans-serif;
     --color-gray: #707070;
 }
 
@@ -919,7 +919,8 @@ article:first-of-type  {
     border: 2px solid var(--color-main);
     transition: all .4s;
     letter-spacing: 0.25em;
-    padding-left: 0.25em
+    padding: 0.2em 0 0.25em 0.25em;
+  
 }
 .form-submit:hover {
     background-color: #fff;
@@ -1042,12 +1043,13 @@ article:first-of-type  {
 
 .sns__list {
     list-style: none;
+    display: flex;
+    align-items: center;
 }
 
 .sns__link {
-    display: flex;
+    display: inline-block;
     width: 22px;
-    height: 22px;
     transition: opacity 0.4s;
 }
 
