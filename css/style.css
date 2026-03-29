@@ -918,9 +918,9 @@ article:first-of-type  {
     cursor: pointer;
     border: 2px solid var(--color-main);
     transition: all .4s;
-    letter-spacing: 0.25em;
-    padding: 0.2em 0 0.25em 0.25em;
-  
+    letter-spacing: 0.25em;   
+    padding-left: 6px;
+    padding-bottom: 2px;
 }
 .form-submit:hover {
     background-color: #fff;
@@ -932,6 +932,7 @@ article:first-of-type  {
     width: 335px;
     height: 41px;
     font-size: 2rem;
+    padding-bottom: 1px;
     }
     
 }
