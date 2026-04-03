@@ -661,7 +661,7 @@ article:first-of-type  {
 .access__info {
     flex: 1;
 }
-.access__name h3 {
+.access__name p {
     font-size: 2.2rem;
     font-weight: 700;
     line-height: calc(33 / 22);
