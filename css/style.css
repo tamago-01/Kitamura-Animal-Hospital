@@ -251,7 +251,7 @@ img {
 }
 
 .greeting {
-  padding: 60px 20px;
+  padding: 60px 30px;
 }
 @media (max-width: 767px) {
   .greeting {
@@ -306,7 +306,6 @@ img {
 .greeting__contents::after {
   content: "";
   position: absolute;
-  /* top: 114px; */
   bottom: -26px;
   right: -24px;
   width: 83px;
@@ -318,17 +317,15 @@ img {
 
 @media (max-width: 1000px) {
   .greeting__contents::after {
-    /* top: 145px; */
     bottom: -17px;
     right: 20px;
-    width: 68px;
-    height: 62px;
+    /* width: 68px;
+    height: 62px; */
   }
 }
 
 @media (max-width: 767px) {
   .greeting__contents::after {
-    /* top: 228px; */
     bottom: 8px;
     right: 10px;
     width: 67px;
@@ -965,6 +962,7 @@ article:first-of-type {
 
 .footer__content {
   margin-inline: auto;
+  max-width: 737px;
 }
 
 .footer-nav {
